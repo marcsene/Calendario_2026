@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Calendario Profesional 2026</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="actions">
+    <button id="btnPDF">Descargar calendario (PDF)</button>
+    <button id="btnPNG">Descargar calendario (Imagen)</button>
+  </div>
+
+<div class="page">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="brand">
+      <div class="logo photo-logo">
+  <img src="foto.png.jpeg" alt="Logo personal">
+</div>
+
+      <div class="titles">
+        <h1>MARCSENE ORTHELA</h1>
+        <h3>INGENIERO EN INFORMÁTICA</h3>
+        <h2>Calendario Profesional 2026</h2>
+        <p class="subtitle">
+          “El ingeniero en  informática Marcsene convierte la complejidad en sistemas simples y eficientes.”
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- BOTONES VISIBLES -->
+  
+  <!-- CALENDARIO -->
+  <main class="calendar-container" id="calendar">
+    <div class="year-grid" id="yearGrid"></div>
+  </main>
+
+  <footer class="footer">
+    © 2026 · ING. MARCSENE ORTHELA
+  </footer>
+
+</div>
+
+<!-- Librería para imagen -->
+<script src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

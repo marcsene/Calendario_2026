@@ -1,0 +1,184 @@
+/* FONDO CON IMAGEN + DEGRADADO */
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  background:
+    linear-gradient(135deg,
+      rgba(59,130,246,0.35),
+      rgba(16,185,129,0.35),
+      rgba(99,102,241,0.35)
+    ),
+    url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80");
+  background-size: cover;
+  background-attachment: fixed;
+}
+/* LOGO CON FOTO */
+.logo.photo-logo {
+  width: 100px;
+  height: 150px;
+  border-radius: 18px; /* cambia a 50% si lo quieres circular */
+  overflow: hidden;
+  border: 3px solid #2563eb;
+  background: #ac97df;
+}
+
+.logo.photo-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* recorte elegante */
+}
+
+.page {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 16px;
+}
+
+/* HEADER */
+.header {
+  background: rgba(247, 241, 227, 0.92);
+  border-radius: 22px;
+  padding: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 18px;
+  background: linear-gradient(135deg,#2563eb,#1e40af);
+  color: #fff;
+  font-size: 30px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titles h1 {
+  margin: 0;
+  font-size: 22px;
+  letter-spacing: .14em;
+}
+.titles h3 {
+  margin: 6px 0;
+  font-size: 13px;
+  color: #1e40af;
+}
+.titles h2 {
+  margin: 10px 0;
+  font-size: 32px;
+  letter-spacing: .12em;
+}
+.subtitle {
+  font-size: 12px;
+  font-style: italic;
+  color: #334155;
+}
+
+/* BOTONES */
+.actions {
+  margin: 14px 0;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+.actions button {
+  padding: 10px 18px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  background: #2563eb;
+  color: #fff;
+}
+.actions button:last-child {
+  background: #10b981;
+}
+
+/* CALENDARIO */
+.calendar-container {
+  background: rgba(247, 241, 227, 0.92);
+  border-radius: 22px;
+  padding: 18px;
+}
+
+.year-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.month {
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  overflow: hidden;
+}
+.month-title {
+  background: linear-gradient(135deg,#020617,#1e293b);
+  color: #e91313;
+  text-align: center;
+  font-weight: 800;
+  padding: 8px;
+  letter-spacing: .12em;
+}
+
+.dow, .days {
+  display: grid;
+  grid-template-columns: repeat(7,1fr);
+}
+.dow div {
+  background: #07e43e;
+  font-size: 10px;
+  text-align: center;
+  padding: 4px 0;
+  font-weight: 700;
+}
+.days div {
+  min-height: 34px;
+  text-align: center;
+  font-size: 11px;
+  padding: 4px;
+}
+
+.weekend { background:#dba476; font-weight:700; }
+.out { color:#afa39c; }
+
+/* FERIADOS */
+.holiday {
+  background:#e1ee26;
+  color:#181515;
+  font-weight:900;
+  border-radius:6px;
+}
+.holiday span {
+  display:block;
+  font-size:8px;
+}
+
+/* FOOTER */
+.footer {
+  text-align:center;
+  font-size:12px;
+  margin-top:10px;
+  opacity:.8;
+}
+
+/* MÓVIL */
+@media (max-width:768px) {
+  .brand { flex-direction:column; text-align:center; }
+  .year-grid { grid-template-columns:1fr; }
+  .actions { flex-direction:column; }
+}
+
+/* IMPRESIÓN */
+@media print {
+  body { background:#ee0707 !important; }
+  .actions { display:none; }
+  @page { size:A4; margin:10mm; }
+}
